@@ -99,7 +99,9 @@ tr:hover td{background:rgba(46,134,193,0.06)}
 .about-card p,.about-card li{font-size:13px;color:var(--muted);line-height:1.6}
 .about-card ul{padding-left:20px}
 .about-card strong{color:var(--text)}
-@media (max-width:768px){main{padding:12px}header{flex-direction:column;height:auto;padding:12px;gap:8px}nav{overflow-x:auto;width:100%}nav button{padding:8px 10px;font-size:11px;white-space:nowrap}.stats-grid{grid-template-columns:repeat(2,1fr)}.toolbar{flex-direction:column}.toolbar input{max-width:100%}}
+.narrative-banner{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;line-height:1.7}
+.tier-info-banner{background:var(--bg);border-bottom:1px solid var(--border);padding:10px 14px}
+@media (max-width:768px){main{padding:12px}header{flex-direction:column;height:auto;padding:12px;gap:8px}nav{overflow-x:auto;width:100%;-webkit-overflow-scrolling:touch}nav button{padding:8px 10px;font-size:11px;white-space:nowrap}.stats-grid{grid-template-columns:repeat(2,1fr)}.toolbar{flex-direction:column}.toolbar input{max-width:100%}.narrative-banner{font-size:13px!important;padding:12px 14px}.tier-info-banner span{font-size:11px!important}.chart-container{padding:12px!important;overflow-x:auto}table{font-size:11px}th,td{padding:6px 8px}#graph-canvas{height:400px}}
 </style>
 </head>
 <body>
@@ -119,6 +121,7 @@ tr:hover td{background:rgba(46,134,193,0.06)}
 
 <!-- DASHBOARD TAB -->
 <div class="tab-content active" id="tab-dashboard">
+<div class="narrative-banner" id="narrative-banner"></div>
 <div class="stats-grid" id="stats-grid"></div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
 <div class="chart-container"><h4>Kategori Dagilimi (Top 10)</h4><div id="dash-cat-chart"></div></div>
@@ -131,6 +134,9 @@ tr:hover td{background:rgba(46,134,193,0.06)}
 <!-- COMPANIES TAB -->
 <div class="tab-content" id="tab-companies">
 <div class="table-container">
+<div class="tier-info-banner" id="tier-info-banner">
+<span style="font-size:12px;color:var(--muted);">📋 <strong>Tier sistemi:</strong> <span class="tier-badge tier-verified">Verified</span> Web + aciklamasi dogrulanmis • <span class="tier-badge tier-enriched">Enriched</span> Kategori/sehir bilgisi var • <span class="tier-badge tier-basic">Basic</span> TRAI listesinden isim (veri dogrulamasi devam ediyor)</span>
+</div>
 <div class="toolbar">
 <input type="text" id="co-search" placeholder="Sirket ara...">
 <select id="co-tier"><option value="">Tum Tier</option><option value="verified">Verified</option><option value="enriched">Enriched</option><option value="basic">Basic</option></select>
@@ -303,6 +309,21 @@ function companyModal(c) {
     { icon:"", value:fmt(Object.keys(DATA.categories).length), label:"Kategori", cls:"accent" },
     { icon:"", value:fmt(m.activeInternships), label:"Staj Programi", cls:"success" }
   ];
+  // Narrative summary
+  var verifCount = DATA.meta.verifiedCompanies;
+  var enrichCount = DATA.meta.enrichedCompanies;
+  var topCat = Object.entries(DATA.categories)[0];
+  var topCity = Object.entries(DATA.cities).sort(function(a,b){return b[1]-a[1];})[0];
+  $("#narrative-banner").innerHTML = 
+    '<div style="display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;">' +
+    '<span style="font-size:15px;line-height:1.6;">' +
+    '<strong>Turkiye AI ekosistemi</strong> — ' + DATA.meta.totalCompanies + ' sirket, $' + (DATA.meta.totalInvestment/1e9).toFixed(1) + 'B yatirim, ' + DATA.meta.unicorns + ' unicorn. ' +
+    'En buyuk teknik alan <strong>' + (topCat ? topCat[0] : '—') + '</strong> (' + (topCat ? topCat[1] : 0) + ' sirket). ' +
+    'Sirketlerin cogunlugu <strong>' + (topCity ? topCity[0] : '—') + '</strong>\'da. ' +
+    verifCount + ' sirket dogrulanmis detayli veriye sahip, ' + enrichCount + ' sirkette temel bilgiler var.' +
+    '</span>' +
+    '</div>';
+
   $("#stats-grid").innerHTML = stats.map(function(s) {
     return '<div class="stat-card '+s.cls+'"><div class="icon">'+s.icon+'</div><div class="value">'+s.value+'</div><div class="label">'+s.label+'</div></div>';
   }).join("");
@@ -674,10 +695,34 @@ function initGraph() {
       var dist = Math.hypot(mx-n.x, my-n.y);
       if (dist < r && dist < bestDist) { best = n; bestDist = dist; }
     }
-    if (best && best.type === "company") {
-      var cid = best.id.replace("co:","");
-      var c = COMPANY_BY_ID[cid];
-      if (c) companyModal(c);
+    if (best) {
+      if (best.type === "company") {
+        var cid = best.id.replace("co:","");
+        var c = COMPANY_BY_ID[cid];
+        if (c) companyModal(c);
+      } else if (best.type === "category") {
+        // Navigate to companies tab filtered by this category
+        $$("nav button").forEach(function(b){b.classList.remove("active");});
+        document.querySelector("nav button[data-tab='companies']").classList.add("active");
+        $$(".tab-content").forEach(function(tc){tc.classList.remove("active");});
+        document.querySelector("#tab-companies").classList.add("active");
+        document.querySelector("#co-category").value = best.label;
+        document.querySelector("#co-search").value = ""; 
+        document.querySelector("#co-tier").value = "";
+        document.querySelector("#co-city").value = "";
+        document.querySelector("#co-search").dispatchEvent(new Event("input"));
+      } else if (best.type === "city") {
+        // Navigate to companies tab filtered by this city
+        $$("nav button").forEach(function(b){b.classList.remove("active");});
+        document.querySelector("nav button[data-tab='companies']").classList.add("active");
+        $$(".tab-content").forEach(function(tc){tc.classList.remove("active");});
+        document.querySelector("#tab-companies").classList.add("active");
+        document.querySelector("#co-city").value = best.label;
+        document.querySelector("#co-search").value = "";
+        document.querySelector("#co-tier").value = "";
+        document.querySelector("#co-category").value = "";
+        document.querySelector("#co-search").dispatchEvent(new Event("input"));
+      }
     }
   });
 
