@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+screenshots/
+gen_html.py
+index_template.html
+generate_data.py
+generate_dashboard_json.py
