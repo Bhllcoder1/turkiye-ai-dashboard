@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-05-23",
-    "totalCompanies": 453,
+    "totalCompanies": 452,
     "verifiedCompanies": 21,
     "enrichedCompanies": 50,
     "totalInvestment": 1099082000,
@@ -176,21 +176,21 @@
       "id": "adsbot",
       "name": "Adsbot (Atlas Robotics)",
       "slug": "adsbot",
-      "tier": "basic",
-      "category": null,
-      "city": null,
+      "tier": "enriched",
       "founded": null,
+      "city": "İstanbul",
       "funding": null,
       "fundingRaw": null,
-      "website": null,
+      "category": "Otonom Sistemler / Robotik",
+      "website": "adsbot.co",
       "description": null,
-      "verified": false,
       "isUnicorn": false,
       "isDiaspora": false,
       "isNew": false,
+      "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "TRAI"
+      "source": "TRAI+Enriched"
     },
     {
       "id": "afara",
@@ -8090,7 +8090,7 @@
       "verified": true,
       "hasJobs": true,
       "hasInternship": true,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "grand-games",
@@ -8110,7 +8110,7 @@
       "verified": false,
       "hasJobs": true,
       "hasInternship": true,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "falai",
@@ -8130,7 +8130,7 @@
       "verified": true,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "hockeystack",
@@ -8150,7 +8150,7 @@
       "verified": true,
       "hasJobs": true,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "fuse-games",
@@ -8170,7 +8170,7 @@
       "verified": false,
       "hasJobs": true,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "dataroid",
@@ -8190,7 +8190,7 @@
       "verified": true,
       "hasJobs": true,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "novus",
@@ -8210,7 +8210,7 @@
       "verified": true,
       "hasJobs": true,
       "hasInternship": true,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "feraset",
@@ -8230,7 +8230,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "mindsite",
@@ -8250,7 +8250,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "uniti-ai",
@@ -8270,7 +8270,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "intryc",
@@ -8290,7 +8290,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "saha-robotics",
@@ -8310,7 +8310,7 @@
       "verified": true,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "archmir",
@@ -8330,7 +8330,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "thingshappen",
@@ -8350,7 +8350,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "eachlabs",
@@ -8370,7 +8370,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "musixen",
@@ -8390,7 +8390,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "mindtail",
@@ -8410,7 +8410,7 @@
       "verified": false,
       "hasJobs": true,
       "hasInternship": true,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "diginakcom",
@@ -8430,7 +8430,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "pera-labs",
@@ -8450,7 +8450,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "boby-ai",
@@ -8470,7 +8470,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "rierino",
@@ -8490,7 +8490,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "mindra",
@@ -8510,7 +8510,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "venuex",
@@ -8530,7 +8530,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "finedine",
@@ -8550,7 +8550,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "gamebyte",
@@ -8570,7 +8570,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "hop-health",
@@ -8590,7 +8590,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "flyway-health",
@@ -8610,7 +8610,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "replenit",
@@ -8630,7 +8630,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "syntonym",
@@ -8650,7 +8650,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "yuppo",
@@ -8670,7 +8670,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "sertifier",
@@ -8690,7 +8690,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "skymod-technology",
@@ -8710,7 +8710,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "jetscoring",
@@ -8730,7 +8730,7 @@
       "verified": true,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "b2metric",
@@ -8750,27 +8750,7 @@
       "verified": true,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
-    },
-    {
-      "id": "adsbot",
-      "name": "Adsbot",
-      "slug": null,
-      "tier": "enriched",
-      "founded": null,
-      "city": "İstanbul",
-      "funding": null,
-      "fundingRaw": null,
-      "category": "Otonom Sistemler / Robotik",
-      "website": "adsbot.co",
-      "description": null,
-      "isUnicorn": false,
-      "isDiaspora": false,
-      "isNew": false,
-      "verified": false,
-      "hasJobs": false,
-      "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "aidea",
@@ -8790,7 +8770,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "vimesoft",
@@ -8810,7 +8790,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "dof-robotics",
@@ -8830,7 +8810,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "kazai",
@@ -8850,7 +8830,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "solustiq",
@@ -8870,7 +8850,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": true,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "haloscape",
@@ -8890,7 +8870,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "racedata-ai",
@@ -8910,7 +8890,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "megatek",
@@ -8930,7 +8910,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "danex-ai",
@@ -8950,7 +8930,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "onysoft-ai",
@@ -8970,7 +8950,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "New Discovery"
+      "source": "Yeni Kesif"
     },
     {
       "id": "lucida-ai",
@@ -8990,7 +8970,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "neurovision-ai",
@@ -9010,7 +8990,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "myth-technologies",
@@ -9030,7 +9010,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "reminisce",
@@ -9050,7 +9030,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     },
     {
       "id": "periodic-labs",
@@ -9070,7 +9050,7 @@
       "verified": false,
       "hasJobs": false,
       "hasInternship": false,
-      "source": "External"
+      "source": "Ek Kaynak"
     }
   ],
   "categories": {
