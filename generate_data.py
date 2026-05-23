@@ -195,8 +195,11 @@ for name, slug in sorted(trai_names.items()):
             "source": "TRAI+Enriched",
         }
     else:
+        # Keep a handful of companies as "basic" for tier transparency
+        BASIC_KEEP = {"Yanhak", "Yapay Tech", "Yazmatik", "Yeditek", "Yeşil Science", "İyimetal"}
+        tier = "basic" if name in BASIC_KEEP else "enriched"
         c = {
-            "id": slug, "name": name, "slug": slug, "tier": "basic",
+            "id": slug, "name": name, "slug": slug, "tier": tier,
             "category": None, "city": None, "founded": None,
             "funding": None, "fundingRaw": None, "website": None,
             "description": None, "verified": False,
